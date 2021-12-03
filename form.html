@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação Natalina da Comunidade</title>
+    <link rel="icon" type="image/svg" href="imgs/giftbox.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <div class="box">
+            <!-- Titles -->
+            <h3><span> Faça uma doação! </span> Você vai tornar alguém da comunidade de Passo Largo mais feliz.</h3>
+            <h5>Cadastre aqui o que você vai doar no dia 18/12</h5>
+            <!-- Formulário -->
+            <form class="box" method="POST" action="form_rec.php" id="form_doacao" enctype="multipart/form-data">
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" maxlength="100" minlength="10" required>
+
+                <input type="text" id="telefone" name="telefone" data-mask="(00) 00000-0000" placeholder="Telefone pra Contato" minlength="15" required>
+
+                <label for="imagem">Arquive sua Foto</label>
+                <div class="nomeArquivo"></div>
+                <input type="file" id="imagem" accept="image/*" name="imagem">
+
+                <label for="roupas">Roupas (unid.)</label>
+                <input type="number" id="roupas" name="roupas" placeholder="unidades">
+
+                <label for="alimentos">Alimentos (kg)</label>
+                <input type="number" id="alimentos" name="alimentos" placeholder="kg">
+
+                <label for="valor">Valor Doado (R$)</label>
+                <input type="number" id="valor" name="valor" placeholder="R$">
+                
+                <input type="submit" value="enviar">
+            </form>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    
+    <script>
+        $(function () {
+            $('#imagem').change(function() {
+                $('.nomeArquivo').html('<p>Arquivo Selecionado:' + $(this).val()) + '</p>';
+            });
+        });
+    </script>
+</body>
+</html>

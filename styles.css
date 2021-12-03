@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    font-family: 'Oswald';
+}
+
+body{
+    background: url(imgs/background.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Geral */
+
+h1, h2, a, h3, h5{
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h1 span, h3 span{
+    color: #FA7773;
+}
+
+h2{
+    margin-top: 2%;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h3{
+    width: 50%;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+h4 span{
+    color: #F2B33D;
+}
+
+h5{
+    width: 50%;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+p{
+    font-size: 0.7rem;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+a{
+    align-self: center;
+    margin-top: 4%;
+    text-decoration: none;
+    background-color: #FA7773;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+a:hover{
+    background-color: #F2B33D;
+    color: #012623;
+}
+
+a img{
+    width: 1.5rem;
+}
+
+#doar{
+    width: 35%;
+    padding: 2.5% 2.5%;
+}
+
+.space{
+    margin-right: 20px;
+}
+
+/* Posicionamento */
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulário */
+
+form, .resultado{
+    padding: 3.3% 2.8%;
+    background-color: rgb(0, 13, 13, 0.6);
+    width: 25rem;
+    border-radius: 15px;
+}
+
+form input{
+    padding: 3% 3%;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #202020;
+    outline: none;
+}
+
+/* Input Submit */
+
+form input[type="submit"]{
+    width: 30%;
+    margin-top: 10px;
+    background-color: #FA7773;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+form input[type="submit"]:hover{
+    background-color: #F2B33D;
+    cursor: pointer;
+}
+
+/* Input's Text */
+
+form input[type="text"]{
+    width: 95%;
+}
+
+form input[type="text"][name="telefone"]{
+    margin-top: 10px;
+}
+
+/* Input File */
+
+form input[type="file"]{
+    display: none;
+}
+
+form label[for="imagem"]{
+    padding: 3% 3%;
+    width: 40%;
+    border-radius: 15px;
+    background-color: #F2B33D;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+}
+
+form label[for="imagem"]:hover{
+    background-color: #FA7773;
+}
+
+/* Input's Number */
+
+form input[type="number"]{
+    width: 70%;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+form label[for="roupas"], form label[for="alimentos"], form label[for="valor"]{
+    color: white;
+    font-size: 0.9rem;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+/* Recibo da Doação */
+
+.resultado{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3.3% 2.5%;
+    background-color: rgb(0, 13, 13, 0.6);
+    width: 25rem;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.resultado img{
+    width: 35%;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.informacoes{
+    padding: 4%;
+}
+
+.resultado .informacoes ul li{
+    list-style: none;
+}
+
+.resultado .informacoes ul li h4{
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.resultado .informacoes ul li h6{
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+#btn_total_doacoes, #btn_voltar{
+    padding: 2.6% 2.6%;
+}
+
+.obg{
+    margin-bottom: 10px;
+    animation: obrigado 4s infinite;
+}
+
+@keyframes obrigado{
+    20%{
+        color: #FA7773;
+    }
+    60%{
+        color: #F2B33D;
+    }
+}
